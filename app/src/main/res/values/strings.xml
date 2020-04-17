@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">MVVMMovieApp</string>
+    <string name="app_name">MVVM Movie App</string>
+    <string name="favorite">Favorite</string>
+    <string name="content_description_favorite">Favorite content</string>
+    <string name="search">Search</string>
+    <string name="content_description_search">Search Description</string>
+    <string name="more">More</string>
+    <string name="content_description_more">More Description</string>
+
 </resources>

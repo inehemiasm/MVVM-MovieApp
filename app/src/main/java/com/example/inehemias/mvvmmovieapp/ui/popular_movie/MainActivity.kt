@@ -2,7 +2,10 @@ package com.example.inehemias.mvvmmovieapp.ui.popular_movie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.SearchView
+
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -14,9 +17,12 @@ import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
 import kotlinx.android.synthetic.main.activity_main.*
 
 
+
+
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainActivityViewModel
     lateinit var movieRepository: MoviePagedListRepository
+    lateinit var searchBar: SearchView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         val movieAdapter = PopularMoviePagedListAdapter(this)
 
-        val gridLayoutManager = GridLayoutManager(this, 3)
+        val gridLayoutManager = GridLayoutManager(this, numberOfColumns)
 
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
@@ -56,6 +62,9 @@ class MainActivity : AppCompatActivity() {
                 movieAdapter.setNetworkState(it)
             }
         })
+
+        searchSomething()
+        numberOfColumns
     }
 
     private fun getViewModel(): MainActivityViewModel {
@@ -66,4 +75,17 @@ class MainActivity : AppCompatActivity() {
             }
         })[MainActivityViewModel::class.java]
     }
+
+    private fun searchSomething() {
+        searchBar = findViewById(R.id.search_bar)
+        var sequence = searchBar.query
+        Log.d("search bar", sequence.toString())
+
+    }
+
+    private val numberOfColumns: Int
+        get() {
+            val rotation = windowManager.defaultDisplay.rotation
+            return if (rotation > 0) 4 else 3
+        }
 }
