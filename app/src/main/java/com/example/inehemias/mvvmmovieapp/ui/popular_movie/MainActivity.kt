@@ -17,8 +17,6 @@ import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-
-
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainActivityViewModel
     lateinit var movieRepository: MoviePagedListRepository
