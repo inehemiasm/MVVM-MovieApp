@@ -15,8 +15,8 @@ object loadProperties {
     }
 
     fun printSystemVariableFromJenkings() {
-        val testString = System.getProperty("test")
-        val urlString = System.getProperty("url")
+        val testString = System.getenv("test")
+        val urlString = System.getenv("url")
         println(testString)
         println(urlString)
         Log.d("Utils", "printSystemVariableFromJenkings: $testString $urlString ")
