@@ -53,3 +53,20 @@ apply plugin: BasePlugin
 tasks.getByName(BasePlugin.CLEAN_TASK_NAME).doLast {
     delete rootProject.buildDir
 }
+
+task task1 {
+    doLast {
+        task1.ext.variable = "some value"
+    }
+}
+
+task task2 {
+    dependsOn task1
+    doLast {
+        println(task1.variable)
+    }
+}
+
+task printProp{
+    println System.getenv()
+}

@@ -1,10 +1,12 @@
 package com.example.inehemias.mvvmmovieapp.ui.popular_movie
 
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build
+import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.SearchView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -15,7 +17,7 @@ import com.example.inehemias.mvvmmovieapp.data.api.TheMovieDBClient
 import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
 import com.example.inehemias.mvvmmovieapp.utils.loadProperties.printSystemVariableFromJenkings
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.math.log
+import java.lang.reflect.Field
 
 
 class MainActivity : AppCompatActivity() {
@@ -62,7 +64,12 @@ class MainActivity : AppCompatActivity() {
             }
         })
         printSystemVariableFromJenkings()
-        Log.d("Main Activity", "onCreate: ${System.getProperties()}")
+        val fields = VERSION_CODES::class.java.fields
+        fields.filter { it.getInt(VERSION_CODES::class) == Build.VERSION.SDK_INT }
+            .forEach { Log.d("Main OsName:", it.name) }
+        //val osName: String = fields[Build.VERSION.SDK_INT + 1].name
+//        Log.d("Android OsName:", codeName)
+//        Log.d("Main Activity", "onCreate: ${System.getProperties()}")
 
     }
 
