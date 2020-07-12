@@ -15,6 +15,7 @@ import com.example.inehemias.mvvmmovieapp.data.api.TheMovieDBClient
 import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
 import com.example.inehemias.mvvmmovieapp.utils.loadProperties.printSystemVariableFromJenkings
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.log
 
 
 class MainActivity : AppCompatActivity() {
@@ -61,6 +62,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
         printSystemVariableFromJenkings()
+        Log.d("Main Activity", "onCreate: ${System.getProperties()}")
+
     }
 
     private fun getViewModel(): MainActivityViewModel {
