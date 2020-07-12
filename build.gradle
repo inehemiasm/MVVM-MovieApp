@@ -68,6 +68,6 @@ task task2 {
 }
 
 task printProp{
-    println "printing enviropment" + System.getenv()
-    println "printing properties" + System.getProperties()
+    println "printing enviropment" + System.getenv("locale")
+    println "printing enviropment" + System.getenv("testEnv")
 }
