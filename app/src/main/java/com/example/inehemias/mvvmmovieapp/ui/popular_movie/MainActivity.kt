@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.inehemias.mvvmmovieapp.R
 import com.example.inehemias.mvvmmovieapp.data.api.TheMovieDBClient
 import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
+import com.example.inehemias.mvvmmovieapp.utils.loadProperties.printSystemVariableFromJenkings
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -59,9 +60,7 @@ class MainActivity : AppCompatActivity() {
                 movieAdapter.setNetworkState(it)
             }
         })
-
-        searchSomething()
-        numberOfColumns
+        printSystemVariableFromJenkings()
     }
 
     private fun getViewModel(): MainActivityViewModel {

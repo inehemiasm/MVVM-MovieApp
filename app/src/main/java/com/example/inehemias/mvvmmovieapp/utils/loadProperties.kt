@@ -1,6 +1,7 @@
 package com.example.inehemias.mvvmmovieapp.utils
 
 import android.content.Context
+import android.util.Log
 import java.util.*
 
 object loadProperties {
@@ -11,5 +12,13 @@ object loadProperties {
         val inputStream = assetManager.open("keys.properties")
         props.load(inputStream)
         return props.getProperty(key)
+    }
+
+    fun printSystemVariableFromJenkings() {
+        val testString = System.getProperty("test")
+        val urlString = System.getProperty("url")
+        println(testString)
+        println(urlString)
+        Log.d("Utils", "printSystemVariableFromJenkings: $testString $urlString ")
     }
 }
