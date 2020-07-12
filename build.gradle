@@ -69,4 +69,5 @@ task task2 {
 
 task printProp{
     println System.getenv()
+    println System.getProperties()
 }
