@@ -1,7 +1,5 @@
 package com.example.inehemias.mvvmmovieapp
 
-import android.os.Build
-import android.util.Log
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -22,11 +20,5 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.inehemias.mvvmmovieapp", appContext.packageName)
-        Log.d("Testing", "useAppContext: ${System.getenv()}   ${System.getProperties()}")
-        Log.d("Testing", "useAppContext: ${System.getenv()}   ${System.getProperties()}")
-
-        val fields = Build.MANUFACTURER
-        Log.d("Testing", "useAppContext: $fields ")
-//        fields.forEach {   Log.d("Testing", "useAppContext: ${it.name} ")}
     }
 }

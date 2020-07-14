@@ -15,9 +15,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.inehemias.mvvmmovieapp.R
 import com.example.inehemias.mvvmmovieapp.data.api.TheMovieDBClient
 import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
-import com.example.inehemias.mvvmmovieapp.utils.loadProperties.printSystemVariableFromJenkings
+import com.example.inehemias.mvvmmovieapp.utils.loadProperties
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.reflect.Field
 
 
 class MainActivity : AppCompatActivity() {
@@ -63,13 +62,12 @@ class MainActivity : AppCompatActivity() {
                 movieAdapter.setNetworkState(it)
             }
         })
-        printSystemVariableFromJenkings()
+
+        loadProperties.printSystemVariableFromJenkings()
+        loadProperties.name = "Main Activity"
         val fields = VERSION_CODES::class.java.fields
         fields.filter { it.getInt(VERSION_CODES::class) == Build.VERSION.SDK_INT }
             .forEach { Log.d("Main OsName:", it.name) }
-        //val osName: String = fields[Build.VERSION.SDK_INT + 1].name
-//        Log.d("Android OsName:", codeName)
-//        Log.d("Main Activity", "onCreate: ${System.getProperties()}")
 
     }
 

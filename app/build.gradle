@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'spoon'
+
 android {
 	compileSdkVersion 29
 	buildToolsVersion "29.0.2"
@@ -58,6 +60,44 @@ dependencies {
 	implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
 	implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
-	//Material
+	// Material
 	implementation 'com.google.android.material:material:1.1.0'
+
+	// Spoon
+
+	implementation 'com.squareup.spoon:spoon-client:1.6.4'
+}
+
+apply plugin: 'com.jaredsburrows.spoon'
+spoon {
+	// for debug output
+	debug = true
+
+	// To run a single test class
+	className = 'fully.qualified.TestCase'
+
+	// To run a single method in TestCase
+	methodName = 'testMyApp'
+
+	// To execute the tests device by device */
+	sequential = true
+
+	// To grant permissions to Android M >= devices */
+	grantAllPermissions = true
+
+	instrumentationArgs = ["variable1:test"]
+
+	// To read it from system environment variables
+    //instrumentationArgs = ["variable1:" + System.getenv('variable1')]
+
+	if(project.hasProperty('locale')) {
+		// To pass values via spoon cmd arg
+		instrumentationArgs = ["locale:" + project.locale]
+	}
+
+	if(project.hasProperty('variable1')) {
+		// To pass values via spoon cmd arg
+		className = System.getenv('title')
+	}
+
 }

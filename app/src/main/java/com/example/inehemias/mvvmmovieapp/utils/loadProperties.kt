@@ -5,6 +5,7 @@ import android.util.Log
 import java.util.*
 
 object loadProperties {
+    var name = " "
 
     fun getProperties(context: Context, key: String): String {
         val props = Properties()
@@ -15,10 +16,6 @@ object loadProperties {
     }
 
     fun printSystemVariableFromJenkings() {
-        val testString = System.getenv("locale")
-        val urlString = System.getenv("testenv")
-        println(testString)
-        println(urlString)
-        Log.d("Utils", "printSystemVariableFromJenkings: $testString $urlString ")
+
     }
 }
