@@ -97,7 +97,7 @@ spoon {
 
 	if(project.hasProperty('variable1')) {
 		// To pass values via spoon cmd arg
-		className = System.getenv('title')
+		methodName = project.variable1
 	}
 
 }
