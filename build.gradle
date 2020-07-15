@@ -58,6 +58,6 @@ tasks.getByName(BasePlugin.CLEAN_TASK_NAME).doLast {
 
 
 task printProp {
-    println "printing enviropment" + System.getenv("variable1")
-    println "printing enviropment" + System.getenv("variable2")
+    println "printing enviropment " + System.getenv("variable1")
+    println "printing enviropment " + System.getenv("variable2")
 }
