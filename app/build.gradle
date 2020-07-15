@@ -70,6 +70,9 @@ dependencies {
 
 apply plugin: 'com.jaredsburrows.spoon'
 spoon {
+
+	title = ""
+
 	// for debug output
 	debug = true
 
@@ -96,8 +99,10 @@ spoon {
 	}
 
 	if(project.hasProperty('variable1')) {
-		// To pass values via spoon cmd arg
 		methodName = project.variable1
 	}
 
+	if(project.hasProperty('title')) {
+		methodName = project.title
+	}
 }
