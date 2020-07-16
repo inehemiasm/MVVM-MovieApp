@@ -63,12 +63,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        loadProperties.printSystemVariableFromJenkings()
-        loadProperties.name = "Main Activity"
-        val fields = VERSION_CODES::class.java.fields
-        fields.filter { it.getInt(VERSION_CODES::class) == Build.VERSION.SDK_INT }
-            .forEach { Log.d("Main OsName:", it.name) }
-
     }
 
     private fun getViewModel(): MainActivityViewModel {

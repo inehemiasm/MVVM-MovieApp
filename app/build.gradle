@@ -11,11 +11,11 @@ android {
 	buildToolsVersion "29.0.2"
 	defaultConfig {
 		applicationId "com.example.inehemias.mvvmmovieapp"
-		minSdkVersion 16
+		minSdkVersion 26
 		targetSdkVersion 29
 		versionCode 1
 		versionName "1.0"
-		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+		testInstrumentationRunner "com.example.inehemias.mvvmmovieapp.testutils.BaseTestClass"
 	}
 	buildTypes {
 		release {
@@ -64,23 +64,24 @@ dependencies {
 	implementation 'com.google.android.material:material:1.1.0'
 
 	// Spoon
-
 	implementation 'com.squareup.spoon:spoon-client:1.6.4'
+
+	// Timber to log
+	implementation 'com.jakewharton.timber:timber:4.7.1'
 }
 
-apply plugin: 'com.jaredsburrows.spoon'
 spoon {
 
-	title = ""
+	title = "Demo Test"
 
 	// for debug output
 	debug = true
 
-	// To run a single test class
-	className = 'fully.qualified.TestCase'
-
-	// To run a single method in TestCase
-	methodName = 'testMyApp'
+//	// To run a single test class
+//	className = 'com.example.inehemias.mvvmmovieapp.DemoTest'
+//
+//	// To run a single method in TestCase
+//	methodName = 'useAppContext'
 
 	// To execute the tests device by device */
 	sequential = true
@@ -88,14 +89,11 @@ spoon {
 	// To grant permissions to Android M >= devices */
 	grantAllPermissions = true
 
-	instrumentationArgs = ["variable1:test"]
-
-	// To read it from system environment variables
-    //instrumentationArgs = ["variable1:" + System.getenv('variable1')]
-
 	if(project.hasProperty('locale')) {
-		// To pass values via spoon cmd arg
-		instrumentationArgs = ["locale:" + project.locale]
+		instrumentationArgs.add("locale:" + project.locale)
+	}
+	if(project.hasProperty('suite')) {
+		instrumentationArgs.add("suite:" + project.suite)
 	}
 
 	if(project.hasProperty('variable1')) {
@@ -103,6 +101,6 @@ spoon {
 	}
 
 	if(project.hasProperty('title')) {
-		methodName = project.title
+		title = project.title
 	}
 }
