@@ -77,17 +77,14 @@ spoon {
 	// for debug output
 	debug = true
 
-//	// To run a single test class
-//	className = 'com.example.inehemias.mvvmmovieapp.DemoTest'
-//
-//	// To run a single method in TestCase
-//	methodName = 'useAppContext'
-
 	// To execute the tests device by device */
 	sequential = true
 
 	// To grant permissions to Android M >= devices */
 	grantAllPermissions = true
+
+	// Clear data before each test
+	clearAppDataBeforeEachTest = true
 
 	if(project.hasProperty('locale')) {
 		instrumentationArgs.add("locale:" + project.locale)
