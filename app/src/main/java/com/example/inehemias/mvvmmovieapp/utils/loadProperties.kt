@@ -1,7 +1,7 @@
 package com.example.inehemias.mvvmmovieapp.utils
 
 import android.content.Context
-import android.util.Log
+import timber.log.Timber
 import java.util.*
 
 object loadProperties {
@@ -13,9 +13,5 @@ object loadProperties {
         val inputStream = assetManager.open("keys.properties")
         props.load(inputStream)
         return props.getProperty(key)
-    }
-
-    fun printSystemVariableFromJenkings() {
-
     }
 }

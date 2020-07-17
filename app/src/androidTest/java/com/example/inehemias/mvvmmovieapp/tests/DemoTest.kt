@@ -1,7 +1,6 @@
 package com.example.inehemias.mvvmmovieapp.tests
 
 import androidx.test.core.app.ActivityScenario
-import androidx.test.platform.app.InstrumentationRegistry
 import com.example.inehemias.mvvmmovieapp.testutils.AndroidTags
 import com.example.inehemias.mvvmmovieapp.testutils.TestSetup
 import com.example.inehemias.mvvmmovieapp.testutils.TestTags
@@ -9,6 +8,7 @@ import com.example.inehemias.mvvmmovieapp.ui.popular_movie.MainActivity
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.Assert.*
+import org.junit.Before
 import timber.log.Timber
 
 /**
@@ -21,30 +21,29 @@ class DemoTest {
 
     private val locale by lazy { TestSetup.locale }
 
+    @Before
+    fun initializeVariables() {
+        ActivityScenario.launch(MainActivity::class.java)
+    }
+
     @Test
     @TestTags(runTags = ["Regression"])
     fun verifyThisTestWillRunForUS() {
-        val activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.inehemias.mvvmmovieapp", appContext.packageName)
+        Timber.e("Running ${TestSetup.tags[0]} tests for $locale ")
         assertEquals("en_us", locale)
     }
 
     @Test
     @TestTags(runTags = ["SMOKE_BR"])
     fun verifyThisTestWillRunForBrazil() {
-        val activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.inehemias.mvvmmovieapp", appContext.packageName)
+        Timber.e("Running ${TestSetup.tags[0]} tests for $locale ")
         assertEquals("pt_br", locale)
     }
 
     @Test
     @TestTags(runTags = ["SMOKE_DE"])
     fun verifyThisTestWillRunForDE() {
-        val activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.inehemias.mvvmmovieapp", appContext.packageName)
+        Timber.e("Running ${TestSetup.tags[0]} tests for $locale ")
         assertEquals("de_de", locale)
     }
 }

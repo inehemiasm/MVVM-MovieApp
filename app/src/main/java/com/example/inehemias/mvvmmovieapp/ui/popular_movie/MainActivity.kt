@@ -1,8 +1,7 @@
 package com.example.inehemias.mvvmmovieapp.ui.popular_movie
 
-import android.os.Build
-import android.os.Build.VERSION_CODES
 import android.os.Bundle
+import android.os.Debug
 import android.util.Log
 import android.view.View
 import android.widget.SearchView
@@ -15,8 +14,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.inehemias.mvvmmovieapp.R
 import com.example.inehemias.mvvmmovieapp.data.api.TheMovieDBClient
 import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
-import com.example.inehemias.mvvmmovieapp.utils.loadProperties
 import kotlinx.android.synthetic.main.activity_main.*
+import timber.log.Timber
 
 
 class MainActivity : AppCompatActivity() {
@@ -62,7 +61,6 @@ class MainActivity : AppCompatActivity() {
                 movieAdapter.setNetworkState(it)
             }
         })
-
     }
 
     private fun getViewModel(): MainActivityViewModel {
@@ -77,7 +75,6 @@ class MainActivity : AppCompatActivity() {
     private fun searchSomething() {
         searchBar = findViewById(R.id.search_bar)
         var sequence = searchBar.query
-        Log.d("search bar", sequence.toString())
 
     }
 

@@ -67,7 +67,7 @@ dependencies {
 	implementation 'com.squareup.spoon:spoon-client:1.6.4'
 
 	// Timber to log
-	implementation 'com.jakewharton.timber:timber:4.7.1'
+	debugImplementation 'com.jakewharton.timber:timber:4.7.1'
 }
 
 spoon {
