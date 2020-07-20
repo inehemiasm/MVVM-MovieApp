@@ -4,6 +4,7 @@ import androidx.test.core.app.ActivityScenario
 import com.example.inehemias.mvvmmovieapp.testutils.AndroidTags
 import com.example.inehemias.mvvmmovieapp.testutils.TestSetup
 import com.example.inehemias.mvvmmovieapp.testutils.TestTags
+import com.example.inehemias.mvvmmovieapp.testutils.loadTestData
 import com.example.inehemias.mvvmmovieapp.ui.popular_movie.MainActivity
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -27,23 +28,23 @@ class DemoTest {
     }
 
     @Test
-    @TestTags(runTags = ["Regression"])
+    @TestTags(runTags = ["Regression", "SMOKE_BR", "SMOKE_DE"])
     fun verifyThisTestWillRunForUS() {
         Timber.e("Running ${TestSetup.tags[0]} tests for $locale ")
-        assertEquals("en_us", locale)
+        assertEquals("Welcome to my app", loadTestData.getLocalizedProperty("welcome"))
     }
 
     @Test
     @TestTags(runTags = ["SMOKE_BR"])
     fun verifyThisTestWillRunForBrazil() {
         Timber.e("Running ${TestSetup.tags[0]} tests for $locale ")
-        assertEquals("pt_br", locale)
+        assertEquals("Bem vindo ao meu aplicativo", loadTestData.getLocalizedProperty("welcome"))
     }
 
     @Test
-    @TestTags(runTags = ["SMOKE_DE"])
+    @TestTags(runTags = ["SMOKE_DE", "SMOKE_BR"])
     fun verifyThisTestWillRunForDE() {
         Timber.e("Running ${TestSetup.tags[0]} tests for $locale ")
-        assertEquals("de_de", locale)
+        assertEquals("Welkom bij mijn app", loadTestData.getLocalizedProperty("welcome"))
     }
 }

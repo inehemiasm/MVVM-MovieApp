@@ -1,7 +1,6 @@
 package com.example.inehemias.mvvmmovieapp.utils
 
 import android.content.Context
-import timber.log.Timber
 import java.util.*
 
 object loadProperties {

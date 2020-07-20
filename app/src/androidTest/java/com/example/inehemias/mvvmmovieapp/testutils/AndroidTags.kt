@@ -1,6 +1,5 @@
 package com.example.inehemias.mvvmmovieapp.testutils
 
-import org.junit.Ignore
 import org.junit.runner.notification.RunNotifier
 import org.junit.runners.BlockJUnit4ClassRunner
 import org.junit.runners.model.FrameworkMethod
@@ -10,66 +9,35 @@ import timber.log.Timber
 /**
  * Android JUnit Tag Runner utility
  */
-//class SetupTags @Throws(InitializationError::class)
-//constructor(c: Class<*>) : BlockJUnit4ClassRunner(c) {
-//    override fun runChild(method: FrameworkMethod, notifier: RunNotifier) {
-//        val description = describeChild(method)
-//        val testConfigTags = TestSetup.tags
-//        var runMethod = false
-//        if (method.getAnnotation(Ignore::class.java) != null) {
-//            notifier.fireTestIgnored(description)
-//        } else if (method.getAnnotation(TestTags::class.java) != null) {
-//            val testTags = method.getAnnotation(TestTags::class.java).toString()
-//            // get all tag names from test method
-//            val methodTags = testTags.replace(".*\\[".toRegex(), "").replace("\\]".toRegex(), "").replace("\\)".toRegex(), "").replace(" ".toRegex(), "")
-//            val tagsFromMethod = methodTags.split(",".toRegex())
-//            for (testConfigTag in testConfigTags) {
-//                for (tagFromMethod in tagsFromMethod) {
-//                    Timber.e("Test tag = $tagFromMethod")
-//                    if (tagFromMethod.equals(testConfigTag, ignoreCase = true) && !testConfigTag.startsWith("#")) {
-//                        runLeaf(methodBlock(method), description, notifier)
-//                        runMethod = true
-//                        break
-//                    }
-//                }
-//            }
-//            if (!runMethod) {
-//                notifier.fireTestIgnored(description)
-//            }
-//        } else {
-//            runLeaf(methodBlock(method), description, notifier)
-//        }
-//    }
-//}
 
 class AndroidTags @Throws(InitializationError::class)
 constructor(c: Class<*>) : BlockJUnit4ClassRunner(c) {
     override fun runChild(method: FrameworkMethod, notifier: RunNotifier) {
         val description = describeChild(method)
-        val testConfigTags = TestSetup.tags
         var runMethod = false
-        if (method.getAnnotation(Ignore::class.java) != null) {
-            notifier.fireTestIgnored(description)
-        } else if (method.getAnnotation(TestTags::class.java) != null) {
-            val testTags = method.getAnnotation(TestTags::class.java).toString()
-            // get all tag names from test method
-            val methodTags = testTags.replace(".*\\[".toRegex(), "").replace("\\]".toRegex(), "").replace("\\)".toRegex(), "").replace(" ".toRegex(), "")
-            val tagsFromMethod = methodTags.split(",".toRegex())
-            for (testConfigTag in testConfigTags) {
-                for (tagFromMethod in tagsFromMethod) {
-                    Timber.e("Test tag = $tagFromMethod")
-                    if (tagFromMethod.equals(testConfigTag, ignoreCase = true) && !testConfigTag.startsWith("#")) {
+        val methodTags = getMethodTags(method)
+        if (method.getAnnotation(TestTags::class.java) != null) {
+            TestSetup.tags.forEach { outerTag ->
+                methodTags.forEach { innerTag ->
+                    if (innerTag.equals(outerTag, ignoreCase = true)) {
                         runLeaf(methodBlock(method), description, notifier)
                         runMethod = true
-                        break
                     }
                 }
             }
             if (!runMethod) {
-                notifier.fireTestIgnored(description)
+                notifier.fireTestIgnored(description
+                    .also { Timber.e("Test Ignored ${ method.name }") })
             }
-        } else {
-            runLeaf(methodBlock(method), description, notifier)
         }
+    }
+
+    // get all tag names from test method
+    private fun getMethodTags(method: FrameworkMethod): List<String> {
+        val myTags = method.getAnnotation(TestTags::class.java).toString()
+        val cleanTags = myTags.replace(".*\\[".toRegex(), "")
+            .replace("]".toRegex(), "").replace("\\)".toRegex(), "")
+            .replace(" ".toRegex(), "")
+        return cleanTags.split(",".toRegex())
     }
 }
