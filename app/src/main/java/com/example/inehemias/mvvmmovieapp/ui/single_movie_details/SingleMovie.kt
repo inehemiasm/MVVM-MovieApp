@@ -14,9 +14,19 @@ import com.example.inehemias.mvvmmovieapp.data.api.TheMovieDBClient
 import com.example.inehemias.mvvmmovieapp.data.api.TheMovieDBInterface
 import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
 import com.example.inehemias.mvvmmovieapp.data.viewController.MovieDetails
-import kotlinx.android.synthetic.main.activity_single_movie.*
 import java.text.NumberFormat
-import java.util.*
+import java.util.Locale
+import kotlinx.android.synthetic.main.activity_single_movie.iv_movie_poster
+import kotlinx.android.synthetic.main.activity_single_movie.movie_budget
+import kotlinx.android.synthetic.main.activity_single_movie.movie_overview
+import kotlinx.android.synthetic.main.activity_single_movie.movie_rating
+import kotlinx.android.synthetic.main.activity_single_movie.movie_release_date
+import kotlinx.android.synthetic.main.activity_single_movie.movie_revenue
+import kotlinx.android.synthetic.main.activity_single_movie.movie_runtime
+import kotlinx.android.synthetic.main.activity_single_movie.movie_tagline
+import kotlinx.android.synthetic.main.activity_single_movie.movie_title
+import kotlinx.android.synthetic.main.activity_single_movie.progress_bar
+import kotlinx.android.synthetic.main.activity_single_movie.txt_error
 
 class SingleMovie : AppCompatActivity() {
 
@@ -41,7 +51,6 @@ class SingleMovie : AppCompatActivity() {
         viewModel.networkState.observe(this, Observer {
             progress_bar.visibility = if (it == NetworkState.LOADED) View.GONE else View.VISIBLE
             txt_error.visibility = if (it == NetworkState.ERROR) View.VISIBLE else View.GONE
-
         })
     }
 

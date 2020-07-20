@@ -1,7 +1,7 @@
 package com.example.inehemias.mvvmmovieapp.utils
 
 import android.content.Context
-import java.util.*
+import java.util.Properties
 
 object loadProperties {
     var name = " "

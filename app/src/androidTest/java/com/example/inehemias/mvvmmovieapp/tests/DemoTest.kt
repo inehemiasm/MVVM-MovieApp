@@ -6,10 +6,10 @@ import com.example.inehemias.mvvmmovieapp.testutils.TestSetup
 import com.example.inehemias.mvvmmovieapp.testutils.TestTags
 import com.example.inehemias.mvvmmovieapp.testutils.loadTestData
 import com.example.inehemias.mvvmmovieapp.ui.popular_movie.MainActivity
+import org.junit.Assert.assertEquals
+import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.junit.Assert.*
-import org.junit.Before
 import timber.log.Timber
 
 /**
