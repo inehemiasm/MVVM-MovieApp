@@ -6,23 +6,48 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Android" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="warn" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Test" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81595210-c49c-434b-8c0f-b0b1155a99d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_1_0_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_0_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_1_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVVMMovieApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MVVMMovieApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/inehemias/mvvmmovieapp/tests/DemoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/inehemias/mvvmmovieapp/tests/DemoTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/inehemias/mvvmmovieapp/ui/single_movie_details/SingleMovie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/inehemias/mvvmmovieapp/ui/single_movie_details/SingleMovie.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/spotless-register-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/spotless-register-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,16 +98,20 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.1108405575">
+      <recent name="com.example.inehemias.mvvmmovieapp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/androidTest/java/com/example/inehemias/mvvmmovieapp/testutils" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.inehemias.mvvmmovieapp.ui.activity_launcher" />
       <recent name="com.example.inehemias.mvvmmovieapp.ui.popular_movie" />
       <recent name="com.example.inehemias.mvvmmovieapp.testutils" />
       <recent name="com.example.inehemias.mvvmmovieapp.tests" />
@@ -441,8 +470,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Android Instrumented Tests.DemoTest (1)" />
-        <item itemvalue="Android Instrumented Tests.All Tests" />
         <item itemvalue="Android Instrumented Tests.verifyThisTestWill...() (1)" />
+        <item itemvalue="Android Instrumented Tests.All Tests" />
         <item itemvalue="Android Instrumented Tests.verifyThisTestWill...() (2)" />
         <item itemvalue="Android Instrumented Tests.DemoTest" />
       </list>
@@ -475,54 +504,58 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="349" y="-790" key="#PSD" timestamp="1594766341242">
+    <state x="349" y="-790" key="#PSD" timestamp="1595302667208">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
-    <state x="349" y="-790" key="#PSD/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1594766341242" />
+    <state x="349" y="-790" key="#PSD/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595302667208" />
     <state x="314" y="-934" key="#app" timestamp="1594435526410">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
     <state x="314" y="-934" key="#app/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1594435526410" />
-    <state x="542" y="-877" width="634" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1594952986814">
+    <state x="542" y="-877" width="652" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1595300873367">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
-    <state x="542" y="-877" width="634" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1594952986814" />
+    <state x="542" y="-877" width="652" height="681" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595300873367" />
     <state x="412" y="-767" key="AndroidCreateResourceDirectoryDialog" timestamp="1595213152832">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
     <state x="412" y="-767" key="AndroidCreateResourceDirectoryDialog/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595213152832" />
-    <state width="1878" height="322" key="GridCell.Tab.0.bottom" timestamp="1595215590101">
+    <state x="683" y="-705" key="AndroidCreateXmlResourceDialog" timestamp="1595644127426">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="1878" height="322" key="GridCell.Tab.0.bottom/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595215590101" />
-    <state width="1878" height="322" key="GridCell.Tab.0.bottom/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595213041452" />
+    <state x="683" y="-705" key="AndroidCreateXmlResourceDialog/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595644127426" />
+    <state width="1861" height="299" key="GridCell.Tab.0.bottom" timestamp="1595648079794">
+      <screen x="-136" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1861" height="299" key="GridCell.Tab.0.bottom/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595648079794" />
+    <state width="1878" height="322" key="GridCell.Tab.0.bottom/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595221393551" />
     <state width="1638" height="274" key="GridCell.Tab.0.bottom/-136.-1057.1920.995/0.23.1680.1027@-136.-1057.1920.995" timestamp="1594777219646" />
     <state width="1812" height="269" key="GridCell.Tab.0.bottom/-136.-1057.1920.996/0.23.1680.1027@-136.-1057.1920.996" timestamp="1594579105464" />
     <state width="1863" height="395" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1595006373841" />
     <state width="1638" height="365" key="GridCell.Tab.0.bottom/0.23.1680.975@0.23.1680.975" timestamp="1594857492685" />
-    <state width="1878" height="322" key="GridCell.Tab.0.center" timestamp="1595215590100">
+    <state width="1861" height="299" key="GridCell.Tab.0.center" timestamp="1595648079794">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="1878" height="322" key="GridCell.Tab.0.center/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595215590100" />
-    <state width="1878" height="322" key="GridCell.Tab.0.center/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595213041451" />
+    <state width="1861" height="299" key="GridCell.Tab.0.center/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595648079794" />
+    <state width="1878" height="322" key="GridCell.Tab.0.center/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595221393551" />
     <state width="1638" height="274" key="GridCell.Tab.0.center/-136.-1057.1920.995/0.23.1680.1027@-136.-1057.1920.995" timestamp="1594777219645" />
     <state width="1812" height="269" key="GridCell.Tab.0.center/-136.-1057.1920.996/0.23.1680.1027@-136.-1057.1920.996" timestamp="1594579105464" />
     <state width="1863" height="395" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1595006373840" />
     <state width="1638" height="365" key="GridCell.Tab.0.center/0.23.1680.975@0.23.1680.975" timestamp="1594857492685" />
-    <state width="1878" height="322" key="GridCell.Tab.0.left" timestamp="1595215590100">
+    <state width="1861" height="299" key="GridCell.Tab.0.left" timestamp="1595648079793">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="1878" height="322" key="GridCell.Tab.0.left/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595215590100" />
-    <state width="1878" height="322" key="GridCell.Tab.0.left/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595213041451" />
+    <state width="1861" height="299" key="GridCell.Tab.0.left/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595648079793" />
+    <state width="1878" height="322" key="GridCell.Tab.0.left/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595221393551" />
     <state width="1638" height="274" key="GridCell.Tab.0.left/-136.-1057.1920.995/0.23.1680.1027@-136.-1057.1920.995" timestamp="1594777219644" />
     <state width="1812" height="269" key="GridCell.Tab.0.left/-136.-1057.1920.996/0.23.1680.1027@-136.-1057.1920.996" timestamp="1594579105463" />
     <state width="1863" height="395" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1595006373840" />
     <state width="1638" height="365" key="GridCell.Tab.0.left/0.23.1680.975@0.23.1680.975" timestamp="1594857492684" />
-    <state width="1878" height="322" key="GridCell.Tab.0.right" timestamp="1595215590101">
+    <state width="1861" height="299" key="GridCell.Tab.0.right" timestamp="1595648079794">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
-    <state width="1878" height="322" key="GridCell.Tab.0.right/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595215590101" />
-    <state width="1878" height="322" key="GridCell.Tab.0.right/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595213041451" />
+    <state width="1861" height="299" key="GridCell.Tab.0.right/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595648079794" />
+    <state width="1878" height="322" key="GridCell.Tab.0.right/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595221393551" />
     <state width="1638" height="274" key="GridCell.Tab.0.right/-136.-1057.1920.995/0.23.1680.1027@-136.-1057.1920.995" timestamp="1594777219645" />
     <state width="1812" height="269" key="GridCell.Tab.0.right/-136.-1057.1920.996/0.23.1680.1027@-136.-1057.1920.996" timestamp="1594579105464" />
     <state width="1863" height="395" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1595006373841" />
@@ -536,15 +569,20 @@
     </state>
     <state x="754" y="-1057" width="1012" height="1056" key="com.android.tools.idea.avdmanager.AvdListDialog/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1594769115523" />
     <state x="754" y="-1057" width="1012" height="994" key="com.android.tools.idea.avdmanager.AvdListDialog/-136.-1057.1920.995/0.23.1680.1027@-136.-1057.1920.995" timestamp="1594508930637" />
-    <state x="291" y="-741" key="com.intellij.ide.util.TipDialog" timestamp="1595212824699">
-      <screen x="-136" y="-1057" width="1920" height="1057" />
+    <state x="374" y="314" key="com.intellij.ide.util.TipDialog" timestamp="1595535444779">
+      <screen x="0" y="23" width="1680" height="974" />
     </state>
-    <state x="291" y="-741" key="com.intellij.ide.util.TipDialog/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595212824699" />
+    <state x="291" y="-741" key="com.intellij.ide.util.TipDialog/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595288262984" />
+    <state x="374" y="314" key="com.intellij.ide.util.TipDialog/-136.-1057.1920.1057/0.23.1680.974@0.23.1680.974" timestamp="1595535444779" />
     <state x="291" y="-741" key="com.intellij.ide.util.TipDialog/-136.-1057.1920.1057/0.23.1680.975@-136.-1057.1920.1057" timestamp="1595191826690" />
     <state x="291" y="-741" key="com.intellij.ide.util.TipDialog/-136.-1057.1920.995/0.23.1680.1027@-136.-1057.1920.995" timestamp="1594579552495" />
     <state x="291" y="-741" key="com.intellij.ide.util.TipDialog/-136.-1057.1920.996/0.23.1680.1027@-136.-1057.1920.996" timestamp="1594579132537" />
     <state x="374" y="314" key="com.intellij.ide.util.TipDialog/0.23.1680.974@0.23.1680.974" timestamp="1594835422991" />
     <state x="374" y="314" key="com.intellij.ide.util.TipDialog/0.23.1680.975@0.23.1680.975" timestamp="1594838073705" />
+    <state x="586" y="-891" key="refactoring.ChangeSignatureDialog" timestamp="1595220733848">
+      <screen x="-136" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="586" y="-891" key="refactoring.ChangeSignatureDialog/-136.-1057.1920.1057/0.23.1680.974@-136.-1057.1920.1057" timestamp="1595220733848" />
     <state x="453" y="-825" width="766" height="734" key="search.everywhere.popup" timestamp="1594940119564">
       <screen x="-136" y="-1057" width="1920" height="1057" />
     </state>
