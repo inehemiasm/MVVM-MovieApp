@@ -2,7 +2,6 @@ package com.example.inehemias.mvvmmovieapp.data.viewController
 
 import com.google.gson.annotations.SerializedName
 
-
 data class Movie(
     val id: Int,
     @SerializedName("poster_path")

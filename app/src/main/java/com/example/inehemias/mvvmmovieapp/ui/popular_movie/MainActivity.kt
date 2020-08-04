@@ -1,11 +1,9 @@
 package com.example.inehemias.mvvmmovieapp.ui.popular_movie
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.SearchView
-
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -15,9 +13,6 @@ import com.example.inehemias.mvvmmovieapp.R
 import com.example.inehemias.mvvmmovieapp.data.api.TheMovieDBClient
 import com.example.inehemias.mvvmmovieapp.data.repository.NetworkState
 import kotlinx.android.synthetic.main.activity_main.*
-
-
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainActivityViewModel
@@ -41,8 +36,8 @@ class MainActivity : AppCompatActivity() {
         gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
                 val viewType = movieAdapter.getItemViewType(position)
-                return if (viewType == movieAdapter.MOVIE_VIEW_TYPE) 1    // Movie_VIEW_TYPE will occupy 1 out of 3 span
-                else 3                                              // NETWORK_VIEW_TYPE will occupy all 3 span
+                return if (viewType == movieAdapter.MOVIE_VIEW_TYPE) 1 // Movie_VIEW_TYPE will occupy 1 out of 3 span
+                else 3 // NETWORK_VIEW_TYPE will occupy all 3 span
             }
         }
 
@@ -62,9 +57,6 @@ class MainActivity : AppCompatActivity() {
                 movieAdapter.setNetworkState(it)
             }
         })
-
-        searchSomething()
-        numberOfColumns
     }
 
     private fun getViewModel(): MainActivityViewModel {
@@ -79,8 +71,6 @@ class MainActivity : AppCompatActivity() {
     private fun searchSomething() {
         searchBar = findViewById(R.id.search_bar)
         var sequence = searchBar.query
-        Log.d("search bar", sequence.toString())
-
     }
 
     private val numberOfColumns: Int

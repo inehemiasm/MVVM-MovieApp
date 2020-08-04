@@ -6,5 +6,8 @@
     <string name="content_description_search">Search Description</string>
     <string name="more">More</string>
     <string name="content_description_more">More Description</string>
+    <string name="welcome_string">Translate: Welcome to my app</string>
+    <string name="translation_hint">Type transaltion here</string>
+    <string name="welcome">Welcome</string>
 
 </resources>

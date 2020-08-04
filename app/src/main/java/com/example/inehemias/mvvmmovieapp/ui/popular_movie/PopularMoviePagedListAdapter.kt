@@ -17,7 +17,6 @@ import com.example.inehemias.mvvmmovieapp.ui.single_movie_details.SingleMovie
 import kotlinx.android.synthetic.main.movie_list_item.view.*
 import kotlinx.android.synthetic.main.network_state_item.view.*
 
-
 class PopularMoviePagedListAdapter(private val context: Context) :
     PagedListAdapter<Movie, RecyclerView.ViewHolder>(MovieDiffCallback()) {
 
@@ -25,7 +24,6 @@ class PopularMoviePagedListAdapter(private val context: Context) :
     private val NETWORK_VIEW_TYPE = 2
 
     private var networkState: NetworkState? = null
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -48,7 +46,6 @@ class PopularMoviePagedListAdapter(private val context: Context) :
         }
     }
 
-
     private fun hasExtraRow(): Boolean {
         return networkState != null && networkState != NetworkState.LOADED
     }
@@ -65,7 +62,6 @@ class PopularMoviePagedListAdapter(private val context: Context) :
         }
     }
 
-
     class MovieDiffCallback : DiffUtil.ItemCallback<Movie>() {
         override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
             return oldItem.id == newItem.id
@@ -74,9 +70,7 @@ class PopularMoviePagedListAdapter(private val context: Context) :
         override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
             return oldItem == newItem
         }
-
     }
-
 
     class MovieItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -94,9 +88,7 @@ class PopularMoviePagedListAdapter(private val context: Context) :
                 intent.putExtra("id", movie?.id)
                 context.startActivity(intent)
             }
-
         }
-
     }
 
     class NetworkStateItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -120,7 +112,6 @@ class PopularMoviePagedListAdapter(private val context: Context) :
         }
     }
 
-
     fun setNetworkState(newNetworkState: NetworkState) {
         val previousState = this.networkState
         val hadExtraRow = hasExtraRow()
@@ -128,14 +119,13 @@ class PopularMoviePagedListAdapter(private val context: Context) :
         val hasExtraRow = hasExtraRow()
 
         if (hadExtraRow != hasExtraRow) {
-            if (hadExtraRow) {                             //hadExtraRow is true and hasExtraRow false
-                notifyItemRemoved(super.getItemCount())    //remove the progressbar at the end
-            } else {                                       //hasExtraRow is true and hadExtraRow false
-                notifyItemInserted(super.getItemCount())   //add the progressbar at the end
+            if (hadExtraRow) { // hadExtraRow is true and hasExtraRow false
+                notifyItemRemoved(super.getItemCount()) // remove the progressbar at the end
+            } else { // hasExtraRow is true and hadExtraRow false
+                notifyItemInserted(super.getItemCount()) // add the progressbar at the end
             }
-        } else if (hasExtraRow && previousState != newNetworkState) { //hasExtraRow is true and hadExtraRow true and (NetworkState.ERROR or NetworkState.ENDOFLIST)
-            notifyItemChanged(itemCount - 1)       //add the network message at the end
+        } else if (hasExtraRow && previousState != newNetworkState) { // hasExtraRow is true and hadExtraRow true and (NetworkState.ERROR or NetworkState.ENDOFLIST)
+            notifyItemChanged(itemCount - 1) // add the network message at the end
         }
-
     }
 }

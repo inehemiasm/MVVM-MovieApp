@@ -15,7 +15,7 @@ class MovieDetailsNetworkDataSource(
 
     private val _networkState = MutableLiveData<NetworkState>()
     val networkState: LiveData<NetworkState>
-        get() = _networkState                   //with this get, no need to implement get function to get networkSate
+        get() = _networkState // with this get, no need to implement get function to get networkSate
 
     private val _downloadedMovieDetailsResponse = MutableLiveData<MovieDetails>()
     val downloadedMovieResponse: LiveData<MovieDetails>

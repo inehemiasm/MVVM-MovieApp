@@ -4,22 +4,33 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'spoon'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.inehemias.mvvmmovieapp"
-        minSdkVersion 16
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.example.inehemias.mvvmmovieapp.testutils.BaseTestClass"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
@@ -34,7 +45,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //ViewModel and LiveData
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
 
     //Recyclerview
     implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha01'
@@ -58,6 +70,44 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
-    //Material
+    // Material
     implementation 'com.google.android.material:material:1.1.0'
+
+    // Spoon
+    implementation 'com.squareup.spoon:spoon-client:1.6.4'
+
+    // Timber to log
+    debugImplementation 'com.jakewharton.timber:timber:4.7.1'
+}
+
+spoon {
+
+    title = "Demo Test"
+
+    // for debug output
+    debug = true
+
+    // To execute the tests device by device */
+    sequential = true
+
+    // To grant permissions to Android M >= devices */
+    grantAllPermissions = true
+
+    // Clear data before each test
+    clearAppDataBeforeEachTest = true
+
+    if(project.hasProperty('locale')) {
+        instrumentationArgs.add("locale:" + project.locale)
+    }
+    if(project.hasProperty('suite')) {
+        instrumentationArgs.add("suite:" + project.suite)
+    }
+
+    if(project.hasProperty('variable1')) {
+        methodName = project.variable1
+    }
+
+    if(project.hasProperty('title')) {
+        title = project.title
+    }
 }

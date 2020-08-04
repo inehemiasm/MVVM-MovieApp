@@ -1,6 +1,5 @@
 package com.example.inehemias.mvvmmovieapp.data.api
 
-
 import com.example.inehemias.mvvmmovieapp.data.viewController.MovieDetails
 import com.example.inehemias.mvvmmovieapp.data.viewController.MovieResponse
 import io.reactivex.Single
